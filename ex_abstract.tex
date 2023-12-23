@@ -1,0 +1,103 @@
+\documentclass[11pt, a4paper, oneside, twocolumn]{jsarticle}
+\usepackage{url}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{geometry}
+\usepackage{comment}
+\geometry{top=1cm, bottom=2cm, left=1.5cm, right=1.5cm}
+\pagestyle{empty}
+
+\title{%
+(タイトル, 適宜改行すること)
+}
+
+
+% 設定
+\newcommand{\authorname}{%
+(著者名)
+}
+\newcommand{\studentID}{%
+(学籍番号)
+}
+\newcommand{\supervisor}{
+% 指導教官 
+増原英彦 教授
+% 叢悠悠 助教
+}
+
+\author{%
+東京工業大学 情報理工学院 数理・計算科学系\\
+\studentID \ 
+\authorname \\
+指導教員 \supervisor
+}
+
+% 提出日？発表日？
+% 無くても良い。空欄にすれば省略される。
+\date{}
+
+\begin{document}
+\maketitle
+
+標準的な構成を下書きとして配置した。
+必ずしも下書きの構成に従う必要はないが、一読した際に以下に記載された項目が読み取りにくい構成は避けることが望ましい。
+
+\section{本研究の動機}
+\begin{itemize}
+\item \textbf{どの分野}の\textbf{どのような課題}が研究を動機付けていますか？
+\item 研究はその\textbf{課題にどのように関連}していますか？
+\item \textbf{研究の目的}はなんですか？
+\end{itemize}
+関連性の強い既存研究が後に言及される場合、本節にも短い説明があると読者の理解を助ける。
+また、上記の箇条書きの内容に加え、通常の研究論文では新規性（なぜ画期的か、技術的に重要か）を主張する必要があるが、卒論では特にその必要はないと考えられている。
+世の中の課題を切り分け、その課題を正しく分析し、卒業研究で行ったことが妥当な手続きであると説明できることが重要。
+
+稀ではあるが、卒業研究が問題や課題に駆動されていない場合は、指導教員に相談すること。
+
+\section{本研究の背景 and/or 課題の詳細化}
+\begin{itemize}
+\item この研究を理解するために必要な概念はなんですか？
+\item 提示された課題はなぜ問題なのですか？
+\end{itemize}
+必要であれば、既存研究の技術やアイデアについても記述する。
+ただし、重要な概念の説明にとどめ、次節以降の内容を圧迫するほど長くなるべきではない。
+
+\section{本研究の内容}
+\begin{itemize}
+\item 研究目的の達成のため、あなたは何をしましたか？
+\end{itemize}
+この節は、多くの研究で以下の構成となる。
+\begin{enumerate}
+\item 目的達成のための方針やアイデアを提示する。
+\item 1が何故研究目的の達成に貢献するのかを説明する。
+\end{enumerate}
+上記の二項目より先に、技術の詳細（Completeな実装方法や言語定義）を書くべきではない。
+
+\section{本研究の評価}
+\begin{itemize}
+\item 前節（研究内容）の研究目的に対する妥当性は、どう担保されていますか？
+\end{itemize}
+卒論執筆時点で評価が終わっていない場合でも、計画を記述するべきだ。
+プログラミング言語分野の研究では、以下のようなプロセスが一般的だ。
+\begin{itemize}
+\item (研究目的に合致した言語の性質)を満たす言語なことを確かめるために定理を証明した。定理の主張は〜である。証明方法は〜を使った。
+\item (研究目的に対応したResearch Question (RQ))を確かめるためにケーススタディ・ユーザー実験を行った。ケーススタディ・ユーザー実験は研究目的に対応して〜のように設計した。その結果は〜だった。考察。
+\item (研究目的に合致した実装の改善)を確かめるために性能測定をした。ベンチマークは研究目的を反映して〜のように設計した。その結果はどうだった。考察。
+\end{itemize}
+
+\section{結論 and/or Future work and/or 関連研究}
+\begin{itemize}
+\item この研究は何を明らかにしましたか？
+\item この研究はどのような新たな研究を可能にしますか？
+\item この研究は他の研究と比較してどのような違いがありますか？
+\end{itemize}
+卒論本体では関連研究・Future work・結論をすべて記述するべきだが、この2ページの概要では余白が不足することが多い。
+何を優先するのかは研究内容次第だが、結論（第一項目）はイントロの繰り返しになりがちなので、他の内容を優先するといいだろう。
+
+{\scriptsize
+% \renewcommand{\refname}{} % 「参考文献」の見出しの文字を空白にする場合はコメントを外す
+\begin{thebibliography}{1} 
+ \bibitem{blockly} Blockly. https://developers.google.com/blockly.
+\end{thebibliography}
+}
+
+\end{document}
