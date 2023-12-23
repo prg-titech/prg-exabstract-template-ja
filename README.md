@@ -1,6 +1,4 @@
-# prg-exabstract-template-ja
-
-## How to build the 2-page abstract
-``
-$ make
-``
+# How to build the 2-page abstract
+```shell
+make
+```
