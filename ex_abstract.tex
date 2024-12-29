@@ -3,6 +3,22 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{geometry}
 \usepackage{comment}
+\usepackage{xcolor}
+
+%%%% macros to add comments
+\newif\ifdraftComments
+\draftCommentsfalse
+\def\mkDraftFn#1#2{%
+  \expandafter\def\csname #1\endcsname##1{\ifdraftComments\textcolor{#2}{[#1: ##1]}\marginpar[$\longrightarrow$]{$\longleftarrow$}\fi}%
+}
+\mkDraftFn{MY}{blue}
+\mkDraftFn{YT}{red}
+\mkDraftFn{YC}{red}
+\mkDraftFn{HM}{red}
+
+\draftCommentstrue
+
+
 \geometry{top=1cm, bottom=2cm, left=1.5cm, right=1.5cm}
 \pagestyle{empty}
 
@@ -37,6 +53,12 @@
 
 \begin{document}
 \maketitle
+
+\HM{教員のコメント}
+
+\YC{教員のコメント}
+
+\YT{教員のコメント}
 
 標準的な構成を下書きとして配置した。
 必ずしも下書きの構成に従う必要はないが、一読した際に以下に記載された項目が読み取りにくい構成は避けることが望ましい。
